@@ -1,4 +1,4 @@
-package com.vlopatka.whyunittests
+package com.vlopatka
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

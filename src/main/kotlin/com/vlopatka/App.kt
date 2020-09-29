@@ -1,4 +1,4 @@
-package com.vlopatka.whyunittests
+package com.vlopatka
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
