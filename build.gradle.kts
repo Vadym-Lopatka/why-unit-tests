@@ -28,6 +28,12 @@ dependencies {
 	implementation ("org.springframework.cloud:spring-cloud-starter-stream-kafka")
 	implementation("org.springframework.cloud:spring-cloud-stream-schema:2.2.1.RELEASE")
 
+	implementation("javax.transaction:javax.transaction-api")
+	implementation("org.hibernate:hibernate-entitymanager")
+	implementation("org.hibernate.validator:hibernate-validator")
+	implementation("org.flywaydb:flyway-core:5.2.4")
+	implementation("org.postgresql:postgresql")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
