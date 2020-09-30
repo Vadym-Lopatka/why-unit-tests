@@ -1,6 +1,5 @@
 package com.vlopatka.domain
 
-import java.io.Serializable
 import java.util.UUID
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -12,6 +11,9 @@ import javax.persistence.Table
 @Entity
 @Table(name = "traffic_light")
 data class TrafficLight(
+    @Id
+    var uuid: String = UUID.randomUUID().toString(),
+
     @Column(name = "device_uuid", nullable = false)
     var deviceUuid: String,
 
@@ -26,11 +28,7 @@ data class TrafficLight(
     @Column(name = "address", nullable = false)
     var address: String,
 
-    ) : Serializable {
-
-    @Id
-    var uuid: String = UUID.randomUUID().toString()
-}
+    )
 
 enum class IndicationStateType {
     GREEN, YELLOW, RED
