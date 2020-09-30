@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class WhyUnitTestsApplication
 
 fun main(args: Array<String>) {
-	runApplication<WhyUnitTestsApplication>(*args)
+    runApplication<WhyUnitTestsApplication>(*args)
 }
