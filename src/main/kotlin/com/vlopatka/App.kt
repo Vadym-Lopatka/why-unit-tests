@@ -1,4 +1,4 @@
-package com.vlopatka.whyunittests
+package com.vlopatka
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class WhyUnitTestsApplication
 
 fun main(args: Array<String>) {
-	runApplication<WhyUnitTestsApplication>(*args)
+    runApplication<WhyUnitTestsApplication>(*args)
 }
