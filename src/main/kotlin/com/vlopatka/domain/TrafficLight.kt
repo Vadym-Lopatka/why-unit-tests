@@ -12,10 +12,10 @@ import javax.persistence.Table
 @Table(name = "traffic_light")
 data class TrafficLight(
     @Id
-    var uuid: String = UUID.randomUUID().toString(),
+    var uuid: String? = UUID.randomUUID().toString(),
 
     @Column(name = "device_uuid", nullable = false)
-    var deviceUuid: String,
+    var deviceUuid: String? = null,
 
     @Enumerated(EnumType.STRING)
     @Column(name = "device_state", nullable = false)
@@ -26,8 +26,7 @@ data class TrafficLight(
     var indicationState: IndicationStateType = IndicationStateType.YELLOW,
 
     @Column(name = "address", nullable = false)
-    var address: String,
-
+    var address: String="",
     )
 
 enum class IndicationStateType {

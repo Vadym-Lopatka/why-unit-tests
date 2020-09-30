@@ -24,7 +24,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-jetty")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-	implementation("org.springframework.cloud:spring-cloud-starter-zipkin")
+//	implementation("org.springframework.cloud:spring-cloud-starter-zipkin")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation ("org.springframework.cloud:spring-cloud-starter-stream-kafka")
 	implementation("org.springframework.cloud:spring-cloud-stream-schema:2.2.1.RELEASE")
