@@ -12,16 +12,19 @@ import javax.persistence.Table
 @Entity
 @Table(name = "traffic_light")
 data class TrafficLight(
+    @Column(name = "device_uuid", nullable = false)
+    var deviceUuid: String,
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "device_state", nullable = false)
+    var deviceState: DeviceStateType = DeviceStateType.OFF,
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "indication_state", nullable = false)
+    var indicationState: IndicationStateType = IndicationStateType.YELLOW,
+
     @Column(name = "address", nullable = false)
-    val address: String,
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "state", nullable = false)
-    var state: StateType = StateType.OFF,
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "indicator", nullable = false)
-    var indicator: IndicatorType = IndicatorType.YELLOW,
+    var address: String,
 
     ) : Serializable {
 
@@ -29,10 +32,10 @@ data class TrafficLight(
     var uuid: String = UUID.randomUUID().toString()
 }
 
-enum class IndicatorType {
+enum class IndicationStateType {
     GREEN, YELLOW, RED
 }
 
-enum class StateType {
+enum class DeviceStateType {
     OFF, ON, BROKEN
 }
